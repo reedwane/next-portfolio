@@ -1,0 +1,47 @@
+@import "./variables";
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin customVerticalScroll {
+  scrollbar-gutter: stable both-edges;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $body-bg;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 8px;
+
+    &:hover {
+      background: $primary-deep;
+    }
+  }
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}

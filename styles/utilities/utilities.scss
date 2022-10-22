@@ -1,0 +1,53 @@
+@import "./index";
+
+.bold {
+  font-weight: 700;
+  color: $dark-text;
+}
+
+.primary {
+  color: $primary;
+}
+
+.large-text {
+  font-size: 25px;
+  line-height: 35px;
+}
+
+.medium-text {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.normal-text {
+  font-size: 16px;
+  line-height: 22.4px;
+}
+.small-text {
+  font-size: 14px;
+  line-height: 19.6px;
+}
+
+.flex-btw {
+  @include flex;
+  justify-content: space-between;
+}
+
+.flex-center {
+  @include flex;
+  justify-content: center;
+}
+
+.flex-start {
+  @include flex;
+  justify-content: flex-start;
+}
+
+.flex-end {
+  @include flex;
+  justify-content: flex-end;
+}
+
+.hide {
+  display: none;
+}

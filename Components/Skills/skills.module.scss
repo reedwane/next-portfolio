@@ -1,0 +1,85 @@
+@import "styles/utilities/index";
+
+@keyframes enlarge {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.scale {
+  //   animation: enlarge 1s ease-in;
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
+}
+
+.body {
+  padding: 2rem;
+}
+
+.desc {
+  margin-top: 2rem;
+  @include tablet {
+    margin: 2rem auto;
+  }
+
+  @include laptop {
+    max-width: 80%;
+    gap: 3rem;
+  }
+}
+
+.myImage {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin: 0 auto;
+  box-shadow: 0px 5px 10px $shadow;
+
+  @include laptop {
+    margin: 0;
+    align-self: flex-end;
+  }
+}
+
+.content {
+  width: 100%;
+  margin-top: 2rem;
+
+  @include tablet {
+    width: 50%;
+    max-width: 450px;
+  }
+}
+
+.stacks {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.stacklist {
+  margin: 2rem;
+  gap: 2rem;
+
+  li {
+    background: $primary;
+    width: 7rem;
+    height: 6rem;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px $shadow;
+
+    svg,
+    p {
+      color: $white-bg;
+    }
+
+    p {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
