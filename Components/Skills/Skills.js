@@ -5,18 +5,9 @@ import { useState } from "react";
 import { BsCaretRight } from "react-icons/bs";
 import styles from "./skills.module.scss";
 
-const Stack = ({ stack }) => {
-  const [overStack, setOverStack] = useState(false);
-
+const Stack = ({ stack, ...props }) => {
   return (
-    <li
-      key={stack.name}
-      onMouseEnter={() => setOverStack(true)}
-      onMouseLeave={() => setOverStack(false)}
-      className={classNames("flex-center", {
-        [styles.scale]: overStack,
-      })}
-    >
+    <li key={stack.name} className={"flex-center"}>
       <span>
         <stack.icon size={30} />
       </span>
@@ -35,7 +26,7 @@ const Skills = () => {
         <div className={classNames("flex-center", styles.desc)}>
           <NextImage
             src={"/assets/my_picture.webp"}
-            styleName={styles.myImage}
+            className={classNames(styles.myImage, {})}
           />
 
           <div className={classNames(styles.content)}>
@@ -47,7 +38,7 @@ const Skills = () => {
 
             <ul className={classNames(styles.stacklist, "flex-center")}>
               {stacks.map((stack) => (
-                <Stack stack={stack} />
+                <Stack stack={stack} className={styles.stack} />
               ))}
             </ul>
           </div>

@@ -45,3 +45,18 @@
   align-items: center;
   flex-wrap: wrap;
 }
+
+@mixin drop {
+  @keyframes drop {
+    from {
+      opacity: 0;
+      transform: translateY(-10vh);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(unset);
+    }
+  }
+
+  animation: drop 0.5s ease-in-out;
+}

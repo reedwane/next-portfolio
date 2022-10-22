@@ -16,7 +16,7 @@ const About = () => {
       <div className="content">
         <div className={classNames("flex-btw", styles.hero)}>
           <NextImage
-            styleName={styles.heroImg}
+            className={styles.heroImg}
             src={"/assets/official_websites.jpg"}
           />
 

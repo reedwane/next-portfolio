@@ -1,12 +1,9 @@
 import classNames from "classnames";
 import Image from "next/image";
 
-const NextImage = ({ styleName, src }) => {
+const NextImage = ({ src, ...props }) => {
   return (
-    <div
-      style={{ position: "relative", overflow: "hidden" }}
-      className={styleName}
-    >
+    <div style={{ position: "relative", overflow: "hidden" }} {...props}>
       <Image objectFit="cover" layout="fill" src={src} />
     </div>
   );
